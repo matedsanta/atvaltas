@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-image: linear-gradient(to bottom right, rgb(36, 158, 97), rgb(31, 140, 173));
+    height: 100vh;
+}
+
+.szamrendszer{
+    padding: 15px;
+    background-color: rgba(33, 206, 163, 0.76);
+    border-radius: 10%;
+    margin: 20px;
+}
+
