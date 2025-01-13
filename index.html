@@ -13,28 +13,29 @@
     <div class="container">
         <div class="szamrendszer">
             <label for="fromSystem">Forrás számrendszer:</label>
-            <input list="szamrendszerek" id="fromSystem" placeholder="Válasszon!" required>
+            <input list="szamrendszerek" id="eredeti" placeholder="Válasszon!" required>
             <datalist id="szamrendszerek">
-                <option value="Decimális">
-                <option value="Hexadecimális">
-                <option value="Oktális">
+                <option value="Decimális" data-id="1"></option>
+                <option value="Hexadecimális" data-id="2"></option>
+                <option value="Oktális" data-id="3"></option>
+                <option value = "Bináris" data-id="4"></option>
             </datalist>
         </div>
 
         <div class="szamrendszer">
             <label for="toSystem">Cél számrendszer:</label>
-            <input list="szamrendszerek" id="toSystem" placeholder="Válasszon!" required>
+            <input list="szamrendszerek" id="kimeneti" placeholder="Válasszon!" required>
         </div>
 
         <div class="input-container">
             <label for="inputNumber">Átváltani való szám:</label>
-            <input type="number" id="inputNumber" placeholder="Írja be a számot" required>
+            <input type="text" id="beszam" placeholder="Írja be a számot" required>
             
             <label for="outputNumber">Átváltott szám:</label>
-            <input type="text" id="outputNumber" readonly>
+            <input type="text" id="kiszam" readonly>
         </div>
 
-        <button id="convertButton">Átváltás</button>
+        <button id="valtasGomb">Átváltás</button>
     </div>
 </div>
     <script src="script.js"></script>
