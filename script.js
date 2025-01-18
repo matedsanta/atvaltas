@@ -147,3 +147,16 @@ valtasGomb.addEventListener("click", () => {
         alert("Érvénytelen választás!");
     }
 });
+
+const csereGomb = document.getElementById("cseregomb");
+
+csereGomb.addEventListener('click', () => {
+    const bemenetiElem = document.querySelector(`datalist option[value="${eredeti.value}"]`);
+    const kimenetiElem = document.querySelector(`datalist option[value="${kimeneti.value}"]`);
+    document.getElementById("eredeti").value = kimenetiElem.value;
+    document.getElementById("kimeneti").value = bemenetiElem.value;
+    const beszam_eredeti = beszam.value;
+    const kiszam_eredeti = kiszam.value;
+    beszam.value = kiszam_eredeti
+    kiszam.value = beszam_eredeti
+});

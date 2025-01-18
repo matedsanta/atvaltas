@@ -37,7 +37,7 @@ body {
     border-radius: 5px;
 }
 
-#valtasGomb {
+button {
     color: #105653;
     font-size: larger;
     font-weight: 800;
@@ -50,9 +50,15 @@ body {
     cursor: pointer;
 }
 
-#valtasGomb:hover {
+button:hover {
     background-color: rgb(22, 174, 161);
 }
+
+
+img {
+    border: none;
+}
+
 
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
