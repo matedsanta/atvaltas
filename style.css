@@ -37,16 +37,20 @@ body {
     border-radius: 5px;
 }
 
-#convertButton {
+#valtasGomb {
+    color: #105653;
+    font-size: larger;
+    font-weight: 800;
     padding: 10px;
     margin: 10px;
-    background-color: rgb(32, 184, 171);
+    background-color: #3aeeb850;
+    width: 290px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-#convertButton:hover {
+#valtasGomb:hover {
     background-color: rgb(22, 174, 161);
 }
 
