@@ -4,9 +4,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom right, rgb(41, 165, 187), rgb(63, 207, 147));
+    background-image: linear-gradient(to bottom right, #29a5bbff, #169f72);
     height: 100vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #105653;
 }
 
 .container {
@@ -15,14 +16,14 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: rgb(34, 189, 168);
+    background-color: #3aeeb850;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .szamrendszer {
     padding: 20px;
-    background-image: linear-gradient(to bottom right, rgb(41, 165, 187), rgb(63, 207, 147));
+    background-color: inherit;
     border-radius: 5px;
     margin: 10px;
     width: 250px;
@@ -32,7 +33,7 @@ body {
     width: 250px;
     padding: 20px;
     margin: 10px;
-    background-image: linear-gradient(to bottom right, rgb(41, 165, 187), rgb(63, 207, 147));
+    background-color: inherit;
     border-radius: 5px;
 }
 
@@ -70,4 +71,9 @@ input {
 input:focus {
     outline: none;
     border-color: #32b8ab;
+}
+
+
+.cim {
+    text-align: center;
 }
