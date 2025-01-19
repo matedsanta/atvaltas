@@ -165,24 +165,33 @@ csereGomb.addEventListener('click', () => {
 const root = document.querySelector(':root');
 
 var szin = false // false=zold, true=rozsaszin
-const rozsaszin = {
-    hatter: 'linear-gradient(to bottom right, #bb29a5ff, #9f1672)',
-    szoveg: '#651056',
-    szin1: '#ee3ab850',
-    szin2: '#ae16a1',
-    szin3: '#b832ab',
+
+// 
+//  Bővíthető további színekkel, de át kell írni a váltólogikát a boolean használatáról
+//
+const szinek = {
+    rozsaszin : {
+        hatter: 'linear-gradient(to bottom right, #bb29a5ff, #9f1672)',
+        szoveg: '#ffffff',
+        szin1: '#ee3ab850',
+        szin2: '#ae16a1',
+        szin3: '#b832ab',
+        gomb: 'src/switch-feher.png'
+    },
+    
+    zold : {
+        hatter: 'linear-gradient(to bottom right, #29a5bbff, #169f72)',
+        szoveg: '#105653',
+        szin1: '#3aeeb850',
+        szin2: '#16aea1',
+        szin3: '#32b8ab',
+        gomb: 'src/switch-zold.png'
+    }
 }
 
-const zold = {
-    hatter: 'linear-gradient(to bottom right, #29a5bbff, #169f72)',
-    szoveg: '#105653',
-    szin1: '#3aeeb850',
-    szin2: '#16aea1',
-    szin3: '#32b8ab',
-}
 
 const body = document.querySelector('body');
-
+const csereicon = document.querySelector('#csico');
 const switchColors = () => {
     const kovSzin = szin ? zold : rozsaszin;
 
@@ -193,8 +202,11 @@ const switchColors = () => {
     root.style.setProperty('--szin-1', kovSzin.szin1)
     root.style.setProperty('--szin-2', kovSzin.szin2)
     root.style.setProperty('--szin-3', kovSzin.szin3)
+    
+    csereicon.src = kovSzin.gomb
 
 }
+//Színcsere gomb hozzáadása
 var button = document.createElement("Button");
 button.id = "szinvalto"
 button.innerHTML = "Színcsere";
