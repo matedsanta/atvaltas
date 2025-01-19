@@ -164,7 +164,7 @@ csereGomb.addEventListener('click', () => {
 
 const root = document.querySelector(':root');
 
-var szin = false // false=zold, true=rozsaszin
+var szin = 0 // false=zold, true=rozsaszin
 
 // 
 //  Bővíthető további színekkel, de át kell írni a váltólogikát a boolean használatáról
@@ -186,6 +186,14 @@ const szinek = {
         szin2: '#16aea1',
         szin3: '#32b8ab',
         gomb: 'src/switch-zold.png'
+    },
+    kek: {  
+        hatter: 'linear-gradient(to bottom right, #1E90FF, #00BFFF)',
+        szoveg: '#ffffff',
+        szin1: '#5C8FFF',
+        szin2: '#3A7BAA',
+        szin3: '#1D4C75',
+        gomb: 'src/switch-feher.png' 
     }
 }
 
@@ -193,9 +201,15 @@ const szinek = {
 const body = document.querySelector('body');
 const csereicon = document.querySelector('#csico');
 const switchColors = () => {
-    const kovSzin = szin ? szinek.zold : szinek.rozsaszin;
+    
+    const szinKulcsok = Object.keys(szinek)
+    if (szin + 1 < szinKulcsok.length) {
+        szin++;
+    } else {
+        szin = 0; 
+    }
 
-    szin = !szin
+    const kovSzin = szinek[szinKulcsok[szin]]
 
     root.style.setProperty('--hatter', kovSzin.hatter)
     root.style.setProperty('--szin-szoveg', kovSzin.szoveg)
@@ -214,4 +228,6 @@ button.style = "top:0;right:0;position:absolute;z-index: 9999"
 document.body.appendChild(button);
 
 button.addEventListener('click', () => {switchColors()})
+
+switchColors()
 
