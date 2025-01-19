@@ -193,7 +193,7 @@ const szinek = {
 const body = document.querySelector('body');
 const csereicon = document.querySelector('#csico');
 const switchColors = () => {
-    const kovSzin = szin ? zold : rozsaszin;
+    const kovSzin = szin ? szinek.zold : szinek.rozsaszin;
 
     szin = !szin
 
