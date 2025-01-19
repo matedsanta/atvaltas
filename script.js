@@ -170,16 +170,15 @@ var szin = 0 // false=zold, true=rozsaszin
 //  Bővíthető további színekkel, de át kell írni a váltólogikát a boolean használatáról
 //
 const szinek = {
-    rozsaszin : {
-        hatter: 'linear-gradient(to bottom right, #bb29a5ff, #9f1672)',
-        szoveg: '#ffffff',
+    rozsaszin: {
+        hatter: 'linear-gradient(to bottom right, #830a5a, #db44c4)',
+        szoveg: '#531a4a',
         szin1: '#ee3ab850',
         szin2: '#ae16a1',
         szin3: '#b832ab',
         gomb: 'src/switch-feher.png'
     },
-    
-    zold : {
+    zold: {
         hatter: 'linear-gradient(to bottom right, #29a5bbff, #169f72)',
         szoveg: '#105653',
         szin1: '#3aeeb850',
@@ -187,16 +186,15 @@ const szinek = {
         szin3: '#32b8ab',
         gomb: 'src/switch-zold.png'
     },
-    kek: {  
-        hatter: 'linear-gradient(to bottom right, #1E90FF, #00BFFF)',
-        szoveg: '#ffffff',
-        szin1: '#5C8FFF',
-        szin2: '#3A7BAA',
-        szin3: '#1D4C75',
-        gomb: 'src/switch-feher.png' 
+    kek: {
+        hatter: 'linear-gradient(to bottom right, #196bbd, #1192c5)',
+        szoveg: '#142569',
+        szin1: '#5c8fff50',
+        szin2: '#314aad',
+        szin3: '#29359e',
+        gomb: 'src/switch-feher.png'
     }
-}
-
+};
 
 const body = document.querySelector('body');
 const csereicon = document.querySelector('#csico');
@@ -230,4 +228,3 @@ document.body.appendChild(button);
 button.addEventListener('click', () => {switchColors()})
 
 switchColors()
-
