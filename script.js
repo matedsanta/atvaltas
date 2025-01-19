@@ -160,3 +160,46 @@ csereGomb.addEventListener('click', () => {
     beszam.value = kiszam_eredeti
     kiszam.value = beszam_eredeti
 });
+
+
+const root = document.querySelector(':root');
+
+var szin = false // false=zold, true=rozsaszin
+const rozsaszin = {
+    hatter: 'linear-gradient(to bottom right, #bb29a5ff, #9f1672)',
+    szoveg: '#651056',
+    szin1: '#ee3ab850',
+    szin2: '#ae16a1',
+    szin3: '#b832ab',
+}
+
+const zold = {
+    hatter: 'linear-gradient(to bottom right, #29a5bbff, #169f72)',
+    szoveg: '#105653',
+    szin1: '#3aeeb850',
+    szin2: '#16aea1',
+    szin3: '#32b8ab',
+}
+
+const body = document.querySelector('body');
+
+const switchColors = () => {
+    const kovSzin = szin ? zold : rozsaszin;
+
+    szin = !szin
+
+    root.style.setProperty('--hatter', kovSzin.hatter)
+    root.style.setProperty('--szin-szoveg', kovSzin.szoveg)
+    root.style.setProperty('--szin-1', kovSzin.szin1)
+    root.style.setProperty('--szin-2', kovSzin.szin2)
+    root.style.setProperty('--szin-3', kovSzin.szin3)
+
+}
+var button = document.createElement("Button");
+button.id = "szinvalto"
+button.innerHTML = "Színcsere";
+button.style = "top:0;right:0;position:absolute;z-index: 9999"
+document.body.appendChild(button);
+
+button.addEventListener('click', () => {switchColors()})
+

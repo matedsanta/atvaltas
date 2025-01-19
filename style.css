@@ -1,10 +1,9 @@
 :root {
     --hatter: linear-gradient(to bottom right, #29a5bbff, #169f72);
-    --zold-szoveg: #105653;
-    --zold-1: #3aeeb850;
-    --zold-2: #16aea1;
-    --zold-3: #32b8ab;
-    --input-hatter: #ccc;
+    --szin-szoveg: #105653;
+    --szin-1: #3aeeb850;
+    --szin-2: #16aea1;
+    --szin-3: #32b8ab;
 }
 
 body {
@@ -13,10 +12,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: var(--hatter);
+    background: var(--hatter);
     height: 100vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: var(--zold-szoveg);
+    color: var(--szin-szoveg);
+
 }
 
 .container {
@@ -25,7 +25,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: var(--zold-1);
+    background-color: var(--szin-1);
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -47,12 +47,12 @@ body {
 }
 
 button {
-    color: var(--zold-szoveg);
+    color: var(--szin-szoveg);
     font-size: larger;
     font-weight: 800;
     padding: 10px;
     margin: 10px;
-    background-color: var(--zold-1);
+    background-color: var(--szin-1);
     width: 290px;
     border: none;
     border-radius: 5px;
@@ -60,7 +60,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--zold-2);
+    background-color: var(--szin-2);
 }
 
 
@@ -84,15 +84,20 @@ input {
     padding: 5px;
     width: 100%;
     border-radius: 5px;
-    border: 1px solid var(--input-szegely);
+    border: 1px solid #ccc;
 }
 
 input:focus {
     outline: none;
-    border-color: var(--zold-3);
+    border-color: var(--szin-3);
 }
 
 
 .cim {
     text-align: center;
+}
+
+#szinvalto {
+    width: fit-content;
+    
 }
