@@ -231,6 +231,9 @@ document.querySelector('#beszam').addEventListener('keypress', () => {
     if (event.key === "Enter") {
         event.preventDefault()
         valtasGomb.click()
+    } else if (event.key === "Tab"){
+        event.preventDefault()
+        csereGomb.click()
     }
     
 })
