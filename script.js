@@ -227,4 +227,12 @@ document.body.appendChild(button);
 
 button.addEventListener('click', () => {switchColors()})
 
+document.querySelector('#beszam').addEventListener('keypress', () => {
+    if (event.key === "Enter") {
+        event.preventDefault()
+        valtasGomb.click()
+    }
+    
+})
+
 switchColors()
