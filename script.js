@@ -227,15 +227,15 @@ document.body.appendChild(button);
 
 button.addEventListener('click', () => {switchColors()})
 
-document.querySelector('#beszam').addEventListener('keypress', () => {
+document.querySelector('#beszam').addEventListener('keydown', (event) => {
     if (event.key === "Enter") {
-        event.preventDefault()
-        valtasGomb.click()
-    } else if (event.key === "Tab"){
-        event.preventDefault()
-        csereGomb.click()
+        event.preventDefault();
+        valtasGomb.click();
+    } else if (event.key === "Tab") {
+        event.preventDefault();
+        csereGomb.click();
     }
-    
-})
+});
+
 
 switchColors()
