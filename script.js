@@ -176,7 +176,7 @@ const szinek = {
         szin1: '#ee3ab850',
         szin2: '#ae16a1',
         szin3: '#b832ab',
-        gomb: 'src/switch-feher.png'
+        gomb: 'src/switch-zold.png'
     },
     zold: {
         hatter: 'linear-gradient(to bottom right, #29a5bbff, #169f72)',
@@ -192,7 +192,7 @@ const szinek = {
         szin1: '#5c8fff50',
         szin2: '#314aad',
         szin3: '#29359e',
-        gomb: 'src/switch-feher.png'
+        gomb: 'src/switch-zold.png'
     }
 };
 
