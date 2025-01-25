@@ -4,6 +4,8 @@
     --szin-1: #3aeeb850;
     --szin-2: #16aea1;
     --szin-3: #32b8ab;
+    --warning-background: white;
+    --warning-button: red;
 }
 
 body {
@@ -101,3 +103,45 @@ input:focus {
     width: fit-content;
     
 }
+
+#warningparent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(117, 117, 117, 0.5);
+
+}
+#warning {
+    position: absolute;
+    top: 50%;
+    left: 50%; /* Use left instead of right */
+    transform: translate(-50%, -50%); /* Adjust translate values */
+    z-index: 9999;
+    opacity: 100%;
+
+    text-align: center;
+    font-size: xx-large;
+  
+    background-color: var(--warning-backround, white);
+    border-radius: 5px;
+    min-width: 400px;
+    min-height: 200px;
+    
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    gap: 50px; 
+
+  }
+
+  #warning button {
+    background-color: var(--warning-button, red);
+    margin: 0;
+    margin-bottom: 5px;
+    color: white;
+    height: 50px;
+    font-size: large;
+  }

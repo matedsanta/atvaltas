@@ -79,7 +79,7 @@ const HexadecimalToDecimal = (num) => {
         } else if (utolsoKarakter >= "A" && utolsoKarakter <= "F") {
             utolsoSzamjegy = utolsoKarakter.charCodeAt(0) - 55; // A=10, B=11, ..., F=15
         } else {
-            alert("Érvénytelen hexadecimális szám!");
+            warn();
             return null;
         }
 
@@ -105,7 +105,7 @@ valtasGomb.addEventListener("click", () => {
         }
 
         if (isNaN(szam) && bemenetId !== 2) {
-            alert("Érvénytelen szám!");
+            warn();
             return;
         }
 
@@ -122,7 +122,7 @@ valtasGomb.addEventListener("click", () => {
                 szam = BinaryToDecimal(parseInt(szam, 10));
                 break;
             default:
-                alert("Érvénytelen bemenet!");
+                warn();
                 return;
         }
 
@@ -140,11 +140,11 @@ valtasGomb.addEventListener("click", () => {
                 kiszam.value = DecimalToBinary(szam);
                 break;
             default:
-                alert("Érvénytelen kimenet!");
+                warn();
                 return;
         }
     } else {
-        alert("Érvénytelen választás!");
+        warn();
     }
 });
 
@@ -219,13 +219,17 @@ const switchColors = () => {
 
 }
 //Színcsere gomb hozzáadása
-var button = document.createElement("Button");
-button.id = "szinvalto"
-button.innerHTML = "Színcsere";
-button.style = "top:0;right:0;position:absolute;z-index: 9999"
-document.body.appendChild(button);
+var colorswitch = document.createElement("Button");
+colorswitch.id = "szinvalto"
+colorswitch.innerHTML = "Színcsere";
+colorswitch.style = "top:0;right:0;position:absolute;z-index: 9999"
+document.body.appendChild(colorswitch);
 
-button.addEventListener('click', () => {switchColors()})
+
+warn();
+
+
+colorswitch.addEventListener('click', () => {switchColors()})
 
 document.querySelector('#beszam').addEventListener('keydown', (event) => {
     if (event.key === "Enter") {
@@ -239,3 +243,25 @@ document.querySelector('#beszam').addEventListener('keydown', (event) => {
 
 
 switchColors()
+
+function warn() {
+    var warning_parent = document.createElement("div");
+    warning_parent.id = "warningparent";
+    document.body.appendChild(warning_parent);
+
+    var warning = document.createElement("div");
+    warning.id = "warning";
+    warning.innerHTML = "Érvénytelen bemenet!";
+    warning_parent.appendChild(warning);
+
+    
+    var close = document.createElement("button")
+    close.innerHTML = "Bezárás"
+    warning.appendChild(close)
+
+
+    close.onclick = () => {
+        document.body.removeChild(warning_parent);
+    }
+}
+
