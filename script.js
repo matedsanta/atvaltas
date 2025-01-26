@@ -164,11 +164,9 @@ csereGomb.addEventListener('click', () => {
 
 const root = document.querySelector(':root');
 
-var szin = 0 // false=zold, true=rozsaszin
+var szin = 0 
 
-// 
-//  Bővíthető további színekkel, de át kell írni a váltólogikát a boolean használatáról
-//
+
 const szinek = {
     rozsaszin: {
         hatter: 'linear-gradient(to bottom right, #830a5a, #db44c4)',
