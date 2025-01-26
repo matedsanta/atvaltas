@@ -219,14 +219,8 @@ const switchColors = () => {
 
 }
 //Színcsere gomb hozzáadása
-var colorswitch = document.createElement("Button");
-colorswitch.id = "szinvalto"
-colorswitch.innerHTML = "Színcsere";
-colorswitch.style = "top:0;right:0;position:absolute;z-index: 9999"
-document.body.appendChild(colorswitch);
-
-
-
+var colorswitch = document.querySelector("#szinvalto")
+/* document.body.appendChild(colorswitch); */
 
 colorswitch.addEventListener('click', () => {switchColors()})
 
@@ -243,7 +237,7 @@ document.querySelector('#beszam').addEventListener('keydown', (event) => {
 
 switchColors()
 
-function warn() {
+const warn = () => {
     var warning_parent = document.createElement("div");
     warning_parent.id = "warningparent";
     document.body.appendChild(warning_parent);
@@ -258,9 +252,10 @@ function warn() {
     close.innerHTML = "Bezárás"
     warning.appendChild(close)
 
-
+    colorswitch.disabled = true
     close.onclick = () => {
         document.body.removeChild(warning_parent);
+        colorswitch.disabled = false
     }
 }
 
