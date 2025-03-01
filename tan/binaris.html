@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bináris Számrendszer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="src/icon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="decimalis.html">Decimális</a></li>
+            <li><a href="binaris.html">Bináris</a></li>
+            <li><a href="oktalis.html">Oktális</a></li>
+            <li><a href="hexadecimalis.html">Hexadecimális</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Bináris Számrendszer</h1>
+        <p>
+            A bináris számrendszer csak két számjegyet használ: 0 és 1. Például a 1011 bináris szám decimális formában: 1*2³ + 0*2² + 1*2¹ + 1*2⁰ = 11.
+        </p>
+
+        <h2>Hogyan működik a bináris átváltás?</h2>
+        <p>
+            A bináris számrendszerből más számrendszerekbe való átváltáshoz a következő lépéseket kell követni:
+        </p>
+        <ol>
+            <li><strong>Bináris → Decimális:</strong> Minden bináris számjegyet megszorzunk 2 megfelelő hatványával, majd összeadjuk az eredményeket.</li>
+            <li><strong>Bináris → Oktális:</strong> A bináris számot hármas csoportokra osztjuk, majd minden csoportot külön-külön átváltunk oktálisra.</li>
+            <li><strong>Bináris → Hexadecimális:</strong> A bináris számot négyes csoportokra osztjuk, majd minden csoportot külön-külön átváltunk hexadecimálisra.</li>
+        </ol>
+
+        <h3>Példa: Bináris → Decimális</h3>
+        <p>
+            Váltsuk át a 1010 bináris számot decimálisra:
+        </p>
+        <pre>
+1 * 2³ = 8
+0 * 2² = 0
+1 * 2¹ = 2
+0 * 2⁰ = 0
+Összeg: 8 + 0 + 2 + 0 = <strong>10</strong>
+        </pre>
+
+        <h2>Gyakorló feladatok</h2>
+        <form id="feladatok">
+            <div class="feladat">
+                <label for="feladat1">1. Váltsd át a 1101 bináris számot decimálisra:</label>
+                <input type="text" id="feladat1" placeholder="Írd ide a választ">
+            </div>
+            <div class="feladat">
+                <label for="feladat2">2. Váltsd át a 101010 bináris számot oktálisra:</label>
+                <input type="text" id="feladat2" placeholder="Írd ide a választ">
+            </div>
+            <div class="feladat">
+                <label for="feladat3">3. Váltsd át a 11110000 bináris számot hexadecimálisra:</label>
+                <input type="text" id="feladat3" placeholder="Írd ide a választ">
+            </div>
+            <button type="button" id="ellenorzes">Ellenőrzés</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

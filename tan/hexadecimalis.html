@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexadecimális Számrendszer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="src/icon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="decimalis.html">Decimális</a></li>
+            <li><a href="binaris.html">Bináris</a></li>
+            <li><a href="oktalis.html">Oktális</a></li>
+            <li><a href="hexadecimalis.html">Hexadecimális</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Hexadecimális Számrendszer</h1>
+        <p>
+            A hexadecimális számrendszer 16 számjegyet használ (0-9 és A-F). Például a 1A3 hexadecimális szám decimális formában: 1*16² + 10*16¹ + 3*16⁰ = 419.
+        </p>
+
+        <h2>Hogyan működik a hexadecimális átváltás?</h2>
+        <p>
+            A hexadecimális számrendszerből más számrendszerekbe való átváltáshoz a következő lépéseket kell követni:
+        </p>
+        <ol>
+            <li><strong>Hexadecimális → Decimális:</strong> Minden hexadecimális számjegyet megszorzunk 16 megfelelő hatványával, majd összeadjuk az eredményeket.</li>
+            <li><strong>Hexadecimális → Bináris:</strong> Minden hexadecimális számjegyet átváltunk 4 bites bináris számmá.</li>
+            <li><strong>Hexadecimális → Oktális:</strong> Először átváltjuk binárisra, majd a bináris számot hármas csoportokra osztjuk és átváltjuk oktálisra.</li>
+        </ol>
+
+        <h3>Példa: Hexadecimális → Decimális</h3>
+        <p>
+            Váltsuk át a 1A3 hexadecimális számot decimálisra:
+        </p>
+        <pre>
+1 * 16² = 256
+A (10) * 16¹ = 160
+3 * 16⁰ = 3
+Összeg: 256 + 160 + 3 = <strong>419</strong>
+        </pre>
+
+        <h2>Gyakorló feladatok</h2>
+        <form id="feladatok">
+            <div class="feladat">
+                <label for="feladat1">1. Váltsd át a 2F hexadecimális számot decimálisra:</label>
+                <input type="text" id="feladat1" placeholder="Írd ide a választ">
+            </div>
+            <div class="feladat">
+                <label for="feladat2">2. Váltsd át a 4D hexadecimális számot binárisra:</label>
+                <input type="text" id="feladat2" placeholder="Írd ide a választ">
+            </div>
+            <div class="feladat">
+                <label for="feladat3">3. Váltsd át a 1B hexadecimális számot oktálisra:</label>
+                <input type="text" id="feladat3" placeholder="Írd ide a választ">
+            </div>
+            <button type="button" id="ellenorzes">Ellenőrzés</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

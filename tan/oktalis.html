@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oktális Számrendszer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="src/icon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="decimalis.html">Decimális</a></li>
+            <li><a href="binaris.html">Bináris</a></li>
+            <li><a href="oktalis.html">Oktális</a></li>
+            <li><a href="hexadecimalis.html">Hexadecimális</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Oktális Számrendszer</h1>
+        <p>
+            Az oktális számrendszer 8 számjegyet használ (0-7). Például a 74 oktális szám decimális formában: 7*8¹ + 4*8⁰ = 60.
+        </p>
+
+        <h2>Hogyan működik az oktális átváltás?</h2>
+        <p>
+            Az oktális számrendszerből más számrendszerekbe való átváltáshoz a következő lépéseket kell követni:
+        </p>
+        <ol>
+            <li><strong>Oktális → Decimális:</strong> Minden oktális számjegyet megszorzunk 8 megfelelő hatványával, majd összeadjuk az eredményeket.</li>
+            <li><strong>Oktális → Bináris:</strong> Minden oktális számjegyet átváltunk 3 bites bináris számmá.</li>
+            <li><strong>Oktális → Hexadecimális:</strong> Először átváltjuk binárisra, majd a bináris számot négyes csoportokra osztjuk és átváltjuk hexadecimálisra.</li>
+        </ol>
+
+        <h3>Példa: Oktális → Decimális</h3>
+        <p>
+            Váltsuk át a 74 oktális számot decimálisra:
+        </p>
+        <pre>
+7 * 8¹ = 56
+4 * 8⁰ = 4
+Összeg: 56 + 4 = <strong>60</strong>
+        </pre>
+
+        <h2>Gyakorló feladatok</h2>
+        <form id="feladatok">
+            <div class="feladat">
+                <label for="feladat1">1. Váltsd át a 12 oktális számot decimálisra:</label>
+                <input type="text" id="feladat1" placeholder="Írd ide a választ">
+            </div>
+            <div class="feladat">
+                <label for="feladat2">2. Váltsd át a 36 oktális számot binárisra:</label>
+                <input type="text" id="feladat2" placeholder="Írd ide a választ">
+            </div>
+            <div class="feladat">
+                <label for="feladat3">3. Váltsd át a 77 oktális számot hexadecimálisra:</label>
+                <input type="text" id="feladat3" placeholder="Írd ide a választ">
+            </div>
+            <button type="button" id="ellenorzes">Ellenőrzés</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

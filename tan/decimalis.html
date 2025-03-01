@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decimális Számrendszer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="src/icon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="decimalis.html">Decimális</a></li>
+            <li><a href="binaris.html">Bináris</a></li>
+            <li><a href="oktalis.html">Oktális</a></li>
+            <li><a href="hexadecimalis.html">Hexadecimális</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Decimális Számrendszer</h1>
+        <p>
+            A decimális számrendszer a mindennapi életben használt rendszer, amely 10 számjegyet használ (0-9). Például a 123 szám decimális formában így néz ki: 1*10² + 2*10¹ + 3*10⁰.
+        </p>
+
+        <h2>Hogyan működik a decimális átváltás?</h2>
+        <p>
+            A decimális számrendszerből más számrendszerekbe való átváltáshoz a következő lépéseket kell követni:
+        </p>
+        <ol>
+            <li><strong>Decimális → Bináris:</strong> A decimális számot osztjuk 2-vel, és a maradékokat feljegyezzük. Az eredményt fordítva olvassuk ki.</li>
+            <li><strong>Decimális → Oktális:</strong> A decimális számot osztjuk 8-cal, és a maradékokat feljegyezzük. Az eredményt fordítva olvassuk ki.</li>
+            <li><strong>Decimális → Hexadecimális:</strong> A decimális számot osztjuk 16-tal, és a maradékokat feljegyezzük. Ha a maradék 10-15 között van, akkor az A-F betűkkel jelöljük.</li>
+        </ol>
+
+        <h3>Példa: Decimális → Bináris</h3>
+        <p>
+            Váltsuk át a 10 decimális számot binárisra:
+        </p>
+        <pre>
+10 / 2 = 5 maradék 0
+5 / 2 = 2 maradék 1
+2 / 2 = 1 maradék 0
+1 / 2 = 0 maradék 1
+        </pre>
+        <p>
+            A maradékokat fordítva olvassuk ki: <strong>1010</strong>.
+        </p>
+
+        <h2>Gyakorló feladatok</h2>
+        <form id="feladatok">
+            <div class="feladat">
+                <label for="feladat1">1. Váltsd át a 15 decimális számot binárisra:</label>
+                <input type="text" id="feladat1" placeholder="Írd ide a választ">
+            </div>
+            <div class="feladat">
+                <label for="feladat2">2. Váltsd át a 25 decimális számot oktálisra:</label>
+                <input type="text" id="feladat2" placeholder="Írd ide a választ">
+            </div>
+            <div class="feladat">
+                <label for="feladat3">3. Váltsd át a 255 decimális számot hexadecimálisra:</label>
+                <input type="text" id="feladat3" placeholder="Írd ide a választ">
+            </div>
+            <button type="button" id="ellenorzes">Ellenőrzés</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

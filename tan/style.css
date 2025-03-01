@@ -1,0 +1,114 @@
+:root {
+    --hatter: linear-gradient(to bottom right, #29a5bbff, #169f72);
+    --szin-szoveg: #105653;
+    --szin-1: #3aeeb850;
+    --szin-2: #16aea1;
+    --szin-3: #32b8ab;
+    --warning-background: white;
+    --warning-button: red;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--hatter);
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--szin-szoveg);
+}
+
+nav {
+    width: 100%;
+    background-color: var(--szin-1);
+    padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--szin-szoveg);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: var(--szin-3);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--szin-1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    max-width: 800px;
+    width: 90%;
+}
+
+h1, h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.feladat {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--szin-3);
+}
+
+button {
+    color: var(--szin-szoveg);
+    font-size: larger;
+    font-weight: 800;
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--szin-1);
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--szin-2);
+}
